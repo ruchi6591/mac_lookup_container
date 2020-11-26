@@ -13,10 +13,12 @@ How to use :
 2. cd mac_lookup_container
 
 3. Build the container:
+
     ./build_container
     
 4. Run container with mac-address as a parameter
-    ./run_container  <mac-address>
+
+    ./run_container  \<mac-address>
    
    eg: ./run_container  44:38:39:ff:ef:57
     
