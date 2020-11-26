@@ -1,0 +1,5 @@
+#!/bin/bash
+WORKING_DIR=`pwd`
+
+
+docker run --rm --env-file ./environment mac_lookup $1
