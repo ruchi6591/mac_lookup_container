@@ -8,7 +8,7 @@ Docker and Git must be installed
 
 How to use :
 
-1. git clone https://github.com/rucdalal/mac_lookup_container
+1. git clone https://github.com/ruchi6591/mac_lookup_container
 
 2. cd mac_lookup_container
 
