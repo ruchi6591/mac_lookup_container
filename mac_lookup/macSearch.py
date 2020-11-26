@@ -1,7 +1,7 @@
-import logging
-import requests
 import os
 import re
+import logging
+import requests
 
 
 class MacSearch:
@@ -32,9 +32,9 @@ class MacSearch:
         except requests.exceptions.HTTPError as err:
             raise SystemExit(err)
         except requests.exceptions.ConnectionError as errc:
-            logging.error("Error Connecting:", errc)
+            logging.error("Error Connecting : {}".format(errc))
         except requests.exceptions.Timeout as errt:
-            logging.error("Timeout Error:", errt)
+            logging.error("Timeout Error : {}".format(errt))
         except requests.exceptions.RequestException as err:
             logging.error("Failed to lookup the MAC address {}:{}".format(mac_address, err))
 
@@ -46,10 +46,9 @@ class MacSearch:
                  "[0-9a-fA-F]{4}\\." +
                  "[0-9a-fA-F]{4})$")
 
-        p = re.compile(regex)
+        match = re.compile(regex)
         if mac_add is None:
             return False
-        if re.search(p, mac_add):
+        if re.search(match, mac_add):
             return True
-        else:
-            return False
+        return False
